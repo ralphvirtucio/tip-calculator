@@ -23,8 +23,8 @@
     <header class="header">
       <img src="./images/logo.svg" alt="Logo" role="heading" />
     </header>
-    <main>
-      <form>
+    <main class="main">
+      <form class="form">
         <section class="col--1">
           <div class="input__container">
             <label for="bill">Bill</label>
@@ -34,49 +34,73 @@
             </div>
           </div>
 
-          <fieldset>
+          <fieldset class="select-tip">
             <legend>Select Tip %</legend>
-            <input type="radio" name="tips" id="five-percent" />
+            <input
+              type="radio"
+              name="tips"
+              id="five-percent"
+              class="select-tip__radio" />
 
-            <input type="radio" name="tips" id="ten-percent" />
+            <input
+              type="radio"
+              name="tips"
+              id="ten-percent"
+              class="select-tip__radio" />
 
-            <input type="radio" name="tips" id="fifteen-percent" />
+            <input
+              type="radio"
+              name="tips"
+              id="fifteen-percent"
+              class="select-tip__radio" />
 
-            <input type="radio" name="tips" id="twenty-five-percent" />
+            <input
+              type="radio"
+              name="tips"
+              id="twenty-five-percent"
+              class="select-tip__radio" />
 
-            <input type="radio" name="tips" id="fifty-percent" />
+            <input
+              type="radio"
+              name="tips"
+              id="fifty-percent"
+              class="select-tip__radio" />
 
-            <input type="number" placeholder="Custom" />
+            <input
+              type="number"
+              placeholder="Custom"
+              class="select-tip__custom-input" />
           </fieldset>
 
-          <div class="input__container">
+          <!-- <div class="input__container">
             <label for="people">Number of People</label>
             <div class="form__control-field">
               <img src="./images/icon-person.svg" alt="Person" />
               <input type="number" id="people" />
             </div>
-          </div>
+          </div> -->
         </section>
 
         <section class="col--2">
-          <div>
-            <div>
-              <div>
-                <p>Tip Amount</p>
-                <p>/ person</p>
+          <div class="tip-total__container">
+            <div class="tip-total">
+              <div class="tip-total__label">
+                <p class="tip-total__label--1">Tip Amount</p>
+                <p class="tip-total__label--2">/ person</p>
               </div>
-              <p>$4.27</p>
+              <p class="tip-total__amount">$4.27</p>
             </div>
-            <div>
-              <div>
-                <p>Total</p>
-                <p>/ person</p>
+
+            <!-- <div class="tip-total">
+              <div class="tip-total__label">
+                <p class="tip-total__label--1">Total</p>
+                <p class="tip-total__label--2">/ person</p>
               </div>
-              <p>$32.79</p>
-            </div>
+              <p class="tip-total__amount">$32.79</p>
+            </div> -->
           </div>
 
-          <button type="submit">Reset</button>
+          <button type="submit" class="tip__reset-btn">Reset</button>
         </section>
       </form>
     </main>
