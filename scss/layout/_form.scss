@@ -57,7 +57,7 @@
     }
 
     input[type='radio'] {
-      display: none;
+      // display: none;
     }
   }
 
@@ -65,7 +65,7 @@
     text-align: right;
     font-size: $fs-form-input;
     color: $neutral-color-1;
-    padding-inline-end: 1rem;
+    padding-inline-end: 0.5rem;
     width: 100%;
     border: none;
     background-color: $neutral-color-5;
@@ -73,6 +73,10 @@
 
     &::placeholder {
       color: $neutral-color-1;
+    }
+
+    &:focus {
+      outline: 2px solid $primary-color-1;
     }
   }
 }
@@ -128,6 +132,10 @@
   font-weight: 700;
   font-size: 1.25rem;
   cursor: pointer;
+
+  &:hover {
+    background-color: #c5e4e7;
+  }
 
   @media (min-width: 1024px) {
     margin-block-end: 1rem;

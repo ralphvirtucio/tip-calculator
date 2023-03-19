@@ -18,6 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
       rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
+    <script defer src="main.js"></script>
   </head>
   <body>
     <header class="header">
@@ -27,9 +28,12 @@
       <form class="form">
         <section class="col--1">
           <div class="input__container">
-            <label for="bill">Bill</label>
+            <div class="input__validation">
+              <label for="bill">Bill</label>
+              <p class="invalid__message">Can't be zero</p>
+            </div>
             <div class="form__control-field">
-              <input type="number" id="bill" />
+              <input type="number" id="bill" class="input__tip" />
             </div>
           </div>
 
@@ -41,6 +45,7 @@
                 type="radio"
                 name="tips"
                 id="five-percent"
+                value="0.05"
                 class="select-tip__radio" />
             </div>
 
@@ -50,6 +55,7 @@
                 type="radio"
                 name="tips"
                 id="ten-percent"
+                value="0.1"
                 class="select-tip__radio" />
             </div>
 
@@ -59,6 +65,7 @@
                 type="radio"
                 name="tips"
                 id="fifteen-percent"
+                value="0.15"
                 class="select-tip__radio" />
             </div>
 
@@ -68,6 +75,7 @@
                 type="radio"
                 name="tips"
                 id="twenty-five-percent"
+                value="0.25"
                 class="select-tip__radio" />
             </div>
 
@@ -77,6 +85,7 @@
                 type="radio"
                 name="tips"
                 id="fifty-percent"
+                value="0.5"
                 class="select-tip__radio" />
             </div>
 
@@ -87,9 +96,12 @@
           </fieldset>
 
           <div class="input__container">
-            <label for="people">Number of People</label>
+            <div class="input__validation">
+              <label for="people">Number of People</label>
+              <p class="invalid__message">Can't be zero</p>
+            </div>
             <div class="form__control-field">
-              <input type="number" id="people" />
+              <input type="number" id="people" class="input__tip" />
             </div>
           </div>
         </section>
@@ -101,7 +113,7 @@
                 <p class="tip-total__label--1">Tip Amount</p>
                 <p class="tip-total__label--2">/ person</p>
               </div>
-              <p class="tip-total__amount">$4.27</p>
+              <p class="tip-total__amount">$0.00</p>
             </div>
 
             <div class="tip-total">
@@ -109,7 +121,7 @@
                 <p class="tip-total__label--1">Total</p>
                 <p class="tip-total__label--2">/ person</p>
               </div>
-              <p class="tip-total__amount">$32.79</p>
+              <p class="tip-total__amount">$0.00</p>
             </div>
           </div>
 
