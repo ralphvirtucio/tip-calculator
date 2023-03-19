@@ -1,7 +1,38 @@
+@use '../abstracts' as *;
+
 .select-tip {
   margin-block-end: 2rem;
   border: none;
   padding-inline: 0;
   padding-block: 0;
   margin-inline: 0;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 1rem;
+
+  &__control {
+    display: flex;
+    justify-content: center;
+    background-color: $neutral-color-1;
+    padding-block: 0.5rem;
+    border-radius: 4px;
+
+    label {
+      font-size: $fs-form-input;
+      color: $neutral-color-6;
+    }
+  }
+
+  &__custom-input {
+    text-align: right;
+    font-size: $fs-form-input;
+    color: $neutral-color-1;
+    padding-inline-end: 1rem;
+    width: 100%;
+    border: none;
+
+    &::placeholder {
+      color: $neutral-color-1;
+    }
+  }
 }

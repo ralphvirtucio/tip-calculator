@@ -71,6 +71,17 @@ select {
     scroll-behavior: auto !important;
   }
 }
+.input__container label {
+  color: hsl(186deg, 14%, 43%);
+  margin-block-end: 0.5rem;
+  display: inline-block;
+}
+
+.select-tip__heading {
+  color: hsl(186deg, 14%, 43%);
+  margin-block-end: 0.5rem;
+}
+
 .header {
   display: flex;
   justify-content: center;
@@ -92,12 +103,31 @@ select {
   padding-inline: 0;
   padding-block: 0;
   margin-inline: 0;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 1rem;
 }
-
-.input__container label {
-  color: hsl(186deg, 14%, 43%);
-  margin-block-end: 0.5rem;
-  display: inline-block;
+.select-tip__control {
+  display: flex;
+  justify-content: center;
+  background-color: hsl(183deg, 100%, 15%);
+  padding-block: 0.5rem;
+  border-radius: 4px;
+}
+.select-tip__control label {
+  font-size: 1.5rem;
+  color: hsl(0deg, 0%, 100%);
+}
+.select-tip__custom-input {
+  text-align: right;
+  font-size: 1.5rem;
+  color: hsl(183deg, 100%, 15%);
+  padding-inline-end: 1rem;
+  width: 100%;
+  border: none;
+}
+.select-tip__custom-input::placeholder {
+  color: hsl(183deg, 100%, 15%);
 }
 
 .form__control-field {
