@@ -1,5 +1,35 @@
 @use '../abstracts' as *;
 
+.form {
+  @media (min-width: 1024px) {
+    display: flex;
+    gap: 2rem;
+  }
+}
+
+.col--1 {
+  @media (min-width: 1024px) {
+    flex: 1;
+  }
+}
+
+.col--2 {
+  background-color: $neutral-color-1;
+  color: $neutral-color-6;
+  padding-inline: 1.5rem;
+  padding-block-start: 2.5rem;
+  padding-block-end: 1rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  @media (min-width: 1024px) {
+    flex: 1;
+    padding-inline: 2.5rem;
+  }
+}
+
 .select-tip {
   margin-block-end: 2rem;
   border: none;
@@ -9,6 +39,10 @@
   display: grid;
   grid-template-columns: 50% 50%;
   gap: 1rem;
+
+  @media (min-width: 1025px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 
   &__control {
     display: flex;
@@ -43,24 +77,24 @@
   }
 }
 
-.col--2 {
-  background-color: $neutral-color-1;
-  color: $neutral-color-6;
-  padding-inline: 1.5rem;
-  padding-block-start: 2.5rem;
-  padding-block-end: 1rem;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
 .tip-total {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
+  &__container {
+    @media (min-width: 1024px) {
+      flex: 1;
+    }
+  }
+
   &__label {
+    &--1 {
+      @media (min-width: 1024px) {
+        font-size: 1.25rem;
+      }
+    }
+
     &--2 {
       color: $neutral-color-3;
     }
@@ -69,10 +103,18 @@
   &__amount {
     font-size: 2rem;
     color: $primary-color-1;
+
+    @media (min-width: 1024px) {
+      font-size: 3rem;
+    }
   }
 
   &:not(&:last-child) {
     margin-block-end: 2rem;
+
+    @media (min-width: 1024px) {
+      flex: 1;
+    }
   }
 }
 
@@ -85,4 +127,11 @@
   padding-block: 0.5rem;
   font-weight: 700;
   font-size: 1.25rem;
+  cursor: pointer;
+
+  @media (min-width: 1024px) {
+    margin-block-end: 1rem;
+    font-size: 1.5rem;
+    padding-block: 1rem;
+  }
 }

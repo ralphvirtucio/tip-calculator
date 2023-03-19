@@ -1,7 +1,6 @@
 @use '../abstracts/' as *;
 
 .form__control-field {
-  margin-block-end: 2rem;
   input {
     background-color: $neutral-color-5;
     background-repeat: no-repeat;
@@ -19,9 +18,15 @@
 
   #bill {
     background-image: url('../../images/icon-dollar.svg');
+    margin-block-end: 2rem;
   }
 
   #people {
     background-image: url('../../images/icon-person.svg');
+    margin-block-end: 2rem;
+
+    @media (min-width: 1024px) {
+      margin-block-end: 0;
+    }
   }
 }
