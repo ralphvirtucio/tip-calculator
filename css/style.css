@@ -71,6 +71,17 @@ select {
     scroll-behavior: auto !important;
   }
 }
+.main {
+  background-color: hsl(0deg, 0%, 100%);
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: 3rem;
+}
+
 body {
   background-color: hsl(185deg, 41%, 84%);
 }
