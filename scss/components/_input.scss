@@ -1,0 +1,35 @@
+@use '../abstracts/' as *;
+
+.input__container {
+  label {
+    color: $neutral-color-2;
+    margin-block-end: 0.5rem;
+    display: inline-block;
+  }
+}
+
+.form__control-field {
+  margin-block-end: 2rem;
+  input {
+    background-color: $neutral-color-5;
+    background-repeat: no-repeat;
+    background-position: 15px center;
+    padding-block: 0.5rem;
+    padding-inline-end: 1rem;
+    border-radius: 6px;
+    border: none;
+    width: 100%;
+    // direction: rtl;
+    text-align: right;
+    font-size: $fs-form-input;
+    color: $neutral-color-1;
+  }
+
+  #bill {
+    background-image: url('../../images/icon-dollar.svg');
+  }
+
+  #people {
+    background-image: url('../../images/icon-person.svg');
+  }
+}

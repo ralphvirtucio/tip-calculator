@@ -1,6 +1,9 @@
 @use './base/reset';
 
-@use './layout/main';
 @use './layout/header';
+@use './layout/main';
+@use './layout/form';
+
+@use './components/input';
 
 @use './pages/home';

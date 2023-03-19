@@ -71,15 +71,56 @@ select {
     scroll-behavior: auto !important;
   }
 }
-.main {
-  background-color: hsl(0deg, 0%, 100%);
-}
-
 .header {
   display: flex;
   justify-content: center;
   align-items: center;
   padding-block: 3rem;
+}
+
+.main {
+  background-color: hsl(0deg, 0%, 100%);
+  padding-inline: 2rem;
+  padding-block: 2rem;
+  font-family: "Space Mono", monospace;
+  min-height: 100vh;
+}
+
+.select-tip {
+  margin-block-end: 2rem;
+  border: none;
+  padding-inline: 0;
+  padding-block: 0;
+  margin-inline: 0;
+}
+
+.input__container label {
+  color: hsl(186deg, 14%, 43%);
+  margin-block-end: 0.5rem;
+  display: inline-block;
+}
+
+.form__control-field {
+  margin-block-end: 2rem;
+}
+.form__control-field input {
+  background-color: hsl(189deg, 41%, 97%);
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  padding-block: 0.5rem;
+  padding-inline-end: 1rem;
+  border-radius: 6px;
+  border: none;
+  width: 100%;
+  text-align: right;
+  font-size: 1.5rem;
+  color: hsl(183deg, 100%, 15%);
+}
+.form__control-field #bill {
+  background-image: url("../../images/icon-dollar.svg");
+}
+.form__control-field #people {
+  background-image: url("../../images/icon-person.svg");
 }
 
 body {
