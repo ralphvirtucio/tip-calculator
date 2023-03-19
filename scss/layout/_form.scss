@@ -21,6 +21,10 @@
       font-size: $fs-form-input;
       color: $neutral-color-6;
     }
+
+    input[type='radio'] {
+      display: none;
+    }
   }
 
   &__custom-input {
@@ -35,4 +39,48 @@
       color: $neutral-color-1;
     }
   }
+}
+
+.col--2 {
+  background-color: $neutral-color-1;
+  color: $neutral-color-6;
+  padding-inline: 1.5rem;
+  padding-block-start: 2.5rem;
+  padding-block-end: 1rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.tip-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__label {
+    &--2 {
+      color: $neutral-color-3;
+    }
+  }
+
+  &__amount {
+    font-size: 2rem;
+    color: $primary-color-1;
+  }
+
+  &:not(&:last-child) {
+    margin-block-end: 2rem;
+  }
+}
+
+.tip__reset-btn {
+  background-color: $primary-color-1;
+  border: none;
+  text-transform: uppercase;
+  color: $neutral-color-1;
+  border-radius: 4px;
+  padding-block: 0.5rem;
+  font-weight: 700;
+  font-size: 1.25rem;
 }

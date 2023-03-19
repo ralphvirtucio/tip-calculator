@@ -79,7 +79,7 @@ select {
 
 .select-tip__heading {
   color: hsl(186deg, 14%, 43%);
-  margin-block-end: 0.5rem;
+  margin-block-end: 1rem;
 }
 
 .header {
@@ -95,6 +95,8 @@ select {
   padding-block: 2rem;
   font-family: "Space Mono", monospace;
   min-height: 100vh;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
 }
 
 .select-tip {
@@ -118,6 +120,9 @@ select {
   font-size: 1.5rem;
   color: hsl(0deg, 0%, 100%);
 }
+.select-tip__control input[type=radio] {
+  display: none;
+}
 .select-tip__custom-input {
   text-align: right;
   font-size: 1.5rem;
@@ -128,6 +133,45 @@ select {
 }
 .select-tip__custom-input::placeholder {
   color: hsl(183deg, 100%, 15%);
+}
+
+.col--2 {
+  background-color: hsl(183deg, 100%, 15%);
+  color: hsl(0deg, 0%, 100%);
+  padding-inline: 1.5rem;
+  padding-block-start: 2.5rem;
+  padding-block-end: 1rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.tip-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tip-total__label--2 {
+  color: hsl(184deg, 14%, 56%);
+}
+.tip-total__amount {
+  font-size: 2rem;
+  color: hsl(172deg, 67%, 45%);
+}
+.tip-total:not(.tip-total:last-child) {
+  margin-block-end: 2rem;
+}
+
+.tip__reset-btn {
+  background-color: hsl(172deg, 67%, 45%);
+  border: none;
+  text-transform: uppercase;
+  color: hsl(183deg, 100%, 15%);
+  border-radius: 4px;
+  padding-block: 0.5rem;
+  font-weight: 700;
+  font-size: 1.25rem;
 }
 
 .form__control-field {
