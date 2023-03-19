@@ -172,14 +172,11 @@ select {
   font-size: 1.5rem;
   color: hsl(0deg, 0%, 100%);
 }
-.select-tip__control input[type=radio] {
-  display: none;
-}
 .select-tip__custom-input {
   text-align: right;
   font-size: 1.5rem;
   color: hsl(183deg, 100%, 15%);
-  padding-inline-end: 1rem;
+  padding-inline-end: 0.5rem;
   width: 100%;
   border: none;
   background-color: hsl(189deg, 41%, 97%);
@@ -187,6 +184,9 @@ select {
 }
 .select-tip__custom-input::placeholder {
   color: hsl(183deg, 100%, 15%);
+}
+.select-tip__custom-input:focus {
+  outline: 2px solid hsl(172deg, 67%, 45%);
 }
 
 .tip-total {
@@ -236,6 +236,9 @@ select {
   font-size: 1.25rem;
   cursor: pointer;
 }
+.tip__reset-btn:hover {
+  background-color: #c5e4e7;
+}
 @media (min-width: 1024px) {
   .tip__reset-btn {
     margin-block-end: 1rem;
@@ -257,6 +260,9 @@ select {
   font-size: 1.5rem;
   color: hsl(183deg, 100%, 15%);
 }
+.form__control-field input:focus {
+  outline: 2px solid hsl(172deg, 67%, 45%);
+}
 .form__control-field #bill {
   background-image: url("../../images/icon-dollar.svg");
   margin-block-end: 2rem;
@@ -269,6 +275,17 @@ select {
   .form__control-field #people {
     margin-block-end: 0;
   }
+}
+
+.input__validation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.invalid__message {
+  color: #ff8080;
+  display: none;
 }
 
 body {
