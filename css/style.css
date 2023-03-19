@@ -130,6 +130,8 @@ select {
   padding-inline-end: 1rem;
   width: 100%;
   border: none;
+  background-color: hsl(189deg, 41%, 97%);
+  border-radius: 4px;
 }
 .select-tip__custom-input::placeholder {
   color: hsl(183deg, 100%, 15%);
@@ -183,7 +185,7 @@ select {
   background-position: 15px center;
   padding-block: 0.5rem;
   padding-inline-end: 1rem;
-  border-radius: 6px;
+  border-radius: 4px;
   border: none;
   width: 100%;
   text-align: right;
