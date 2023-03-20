@@ -167,10 +167,13 @@ select {
   background-color: hsl(183deg, 100%, 15%);
   padding-block: 0.5rem;
   border-radius: 4px;
+  color: hsl(0deg, 0%, 100%);
 }
 .select-tip__control label {
   font-size: 1.5rem;
-  color: hsl(0deg, 0%, 100%);
+}
+.select-tip__control input[type=radio]:checked {
+  background-color: red;
 }
 .select-tip__custom-input {
   text-align: right;
@@ -187,6 +190,11 @@ select {
 }
 .select-tip__custom-input:focus {
   outline: 2px solid hsl(172deg, 67%, 45%);
+}
+
+.selected-tip {
+  background-color: #abeee6;
+  color: hsl(183deg, 100%, 15%);
 }
 
 .tip-total {
