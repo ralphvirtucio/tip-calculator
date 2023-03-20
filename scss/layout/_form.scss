@@ -50,14 +50,18 @@
     background-color: $neutral-color-1;
     padding-block: 0.5rem;
     border-radius: 4px;
+    color: $neutral-color-6;
 
     label {
       font-size: $fs-form-input;
-      color: $neutral-color-6;
     }
 
     input[type='radio'] {
       // display: none;
+
+      &:checked {
+        background-color: red;
+      }
     }
   }
 
@@ -79,6 +83,11 @@
       outline: 2px solid $primary-color-1;
     }
   }
+}
+
+.selected-tip {
+  background-color: #abeee6;
+  color: hsl(183, 100%, 15%);
 }
 
 .tip-total {

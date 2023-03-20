@@ -4,6 +4,8 @@ const tipTotalAmount = document.querySelectorAll('.tip-total__amount');
 const radioBtnContainer = document.querySelectorAll('.select-tip__control');
 const radioBtn = document.querySelectorAll('.select-tip__radio');
 
+// Number.isFinite - to check the number
+
 inputNumber.forEach((node, i) => {
   node.addEventListener('blur', (e) => {
     if (+e.target.value <= 0) {
@@ -19,10 +21,10 @@ inputNumber.forEach((node, i) => {
 });
 
 radioBtn.forEach((node, i) => {
-  node.addEventListener('click', (e) => {
+  let selectedValue;
+  node.addEventListener('change', function (e) {
     if (e.target.checked) {
-      radioBtnContainer[i].style.backgroundColor = '#ABEEE6';
-      radioBtnContainer[i].children[0].style.color = 'hsl(183, 100%, 15%)';
+      selectedValue = e.target.value;
     }
   });
 });
