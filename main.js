@@ -20,11 +20,13 @@ inputNumber.forEach((node, i) => {
   });
 });
 
+// NEED HELP
 radioBtn.forEach((node, i) => {
-  let selectedValue;
   node.addEventListener('change', function (e) {
     if (e.target.checked) {
-      selectedValue = e.target.value;
+      radioBtnContainer[i].classList.add('selected-tip');
+    } else {
+      radioBtnContainer[i].classList.remove('selected-tip');
     }
   });
 });
