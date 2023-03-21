@@ -172,9 +172,6 @@ select {
 .select-tip__control label {
   font-size: 1.5rem;
 }
-.select-tip__control input[type=radio]:checked {
-  background-color: red;
-}
 .select-tip__custom-input {
   text-align: right;
   font-size: 1.5rem;
