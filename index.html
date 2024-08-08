@@ -53,6 +53,7 @@
           <div class="input__control">
             <input
               type="number"
+              name="bill"
               autocomplete="off"
               placeholder="0"
               id="bill" />
@@ -67,6 +68,7 @@
               <input
                 type="radio"
                 name="percentage"
+                value="5"
                 id="option5" />
               <label for="option5">5%</label>
             </div>
@@ -135,6 +137,7 @@
           <div class="input__control">
             <input
               type="number"
+              name="quantity"
               autocomplete="off"
               placeholder="0"
               id="quantity" />
@@ -156,7 +159,7 @@
             <div
               class="price"
               id="amount">
-              <span>$4.27</span>
+              <span>$0.00</span>
             </div>
           </div>
 
@@ -168,12 +171,13 @@
             <div
               class="price"
               id="total">
-              <span>$32.79</span>
+              <span>$0.00</span>
             </div>
           </div>
         </div>
         <button
           type="reset"
+          disabled
           class="btn__reset">
           Reset
         </button>
