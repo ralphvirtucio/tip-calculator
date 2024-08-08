@@ -80,21 +80,20 @@
 }
 /* END OF Reset ******************/
 
-
 /* START OF VARIABLES */
 @layer base {
   :root {
-    --primary-clr: #26C2AE;
-    --primary-clr-2: #E17457;
+    --primary-clr: #26c2ae;
+    --primary-clr-2: #e17457;
 
     --neutral-clr-1: #c5e4e7;
-    --neutral-clr-2: #F3F9FA;
-    --neutral-clr-3: #00474B;
+    --neutral-clr-2: #f3f9fa;
+    --neutral-clr-3: #00474b;
     --neutral-clr-4: #5e7a7d;
     --neutral-clr-5: #547878;
     --neutral-clr-6: #7f9d9f;
-    --neutral-clr-7: #9FE8DF;
-    --neutral-clr-8: #9EBBBD;
+    --neutral-clr-7: #9fe8df;
+    --neutral-clr-8: #9ebbbd;
     --white: #ffff;
 
     --main-bg: var(--neutral-clr-1);
@@ -111,7 +110,7 @@
     --custom-plchldr-clr: var(--neutral-clr-5);
     --person-clr: var(--neutral-clr-6);
     --price-clr: var(--primary-clr);
-    --error-clr: var(--primary-clr-2); 
+    --error-clr: var(--primary-clr-2);
 
     --border-radius-lg: 25px;
     --border-radius-md: 15px;
@@ -121,8 +120,7 @@
 
     --fw-700: 700;
 
-
-    --main-font-family: "Space Mono", monospace;
+    --main-font-family: 'Space Mono', monospace;
   }
 
   .sr-only {
@@ -140,11 +138,16 @@
   }
 }
 
-
 @layer pages {
   body {
     background-color: var(--main-bg);
     font-family: var(--main-font-family);
+
+    @media screen and (min-width: 62em) {
+     display: grid;
+     place-items: center;
+     grid-auto-rows: 10rem 30rem;
+    }
   }
 }
 
@@ -152,6 +155,13 @@
   .grid {
     display: grid;
     grid-template-columns: 1fr;
+
+    @media screen and (min-width: 62em) {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 3rem;
+      margin-inline: 2rem;
+    }
+
   }
 
   .flex-c-sb {
@@ -166,8 +176,6 @@
   }
 }
 
-
-
 @layer components {
   .spl__header {
     display: grid;
@@ -181,13 +189,20 @@
     border-top-right-radius: var(--border-radius-lg);
     padding: 2rem;
     margin-block-start: 2.5rem;
+
+    @media screen and (min-width: 62em) {
+      border-radius: var(--border-radius-lg);
+      max-width: 62rem;
+    }
+
+   
   }
 
   .form__control {
     display: grid;
     grid-template-columns: 1fr max-content;
     row-gap: 6px;
-    
+
     label {
       color: var(--label-clr);
       font-size: 1rem;
@@ -207,9 +222,7 @@
       background-color: var(--input-bg);
       padding-block: 6px;
       padding-inline: 17px;
-      border-radius: var(--border-radius-sm); 
-
-      
+      border-radius: var(--border-radius-sm);
 
       input {
         width: 100%;
@@ -220,6 +233,7 @@
         outline: none;
         text-align: right;
         background-color: transparent;
+        /* background-color: var(--input-bg); */
 
 
         &::placeholder {
@@ -242,7 +256,6 @@
     border: none;
     padding: 0;
     margin-block: 2.5rem;
-  
 
     legend {
       color: var(--label-clr);
@@ -261,7 +274,11 @@
     font-size: var(--fs-form);
     font-weight: var(--fw-700);
 
-    input[type="radio"] {
+    @media screen and (min-width: 48em) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    input[type='radio'] {
       display: none;
     }
 
@@ -270,7 +287,7 @@
       color: var(--white);
       text-align: center;
       border-radius: var(--border-radius-sm);
-      padding-block: .5rem;
+      padding-block: 0.5rem;
     }
   }
 
@@ -278,7 +295,6 @@
     background-color: var(--input-bg);
     padding-block: 6px;
     border-radius: var(--border-radius-sm);
-    
 
     input {
       background-color: transparent;
@@ -294,7 +310,6 @@
   }
   /* END SPL TIP SELECTOR AND CHILDREN *************** */
 
-
   .spl__results {
     background-color: var(--results-bg);
     border-radius: var(--border-radius-md);
@@ -306,6 +321,12 @@
     flex-direction: column;
     gap: 2rem;
 
+    @media screen and (min-width: 62em) {
+      margin-block-start: 0;
+      padding: 2.5rem;
+    }
+
+
     .spl__results-info {
       display: flex;
       flex-direction: column;
@@ -316,6 +337,8 @@
     .price-title {
       font-size: 1rem;
       font-weight: var(--fw-700);
+
+
     }
 
     .price-label {
@@ -324,11 +347,15 @@
       line-height: 1;
     }
 
-
     .price {
       font-size: 2rem;
       font-weight: var(--fw-700);
       color: var(--price-clr);
+
+      @media screen and (min-width: 62em) {
+        font-size: 3rem;
+      }
+  
     }
   }
 
@@ -343,10 +370,16 @@
     border-radius: var(--border-radius-sm);
     margin-block-start: 1rem;
     cursor: pointer;
-    transition: background-color .25s;
+    transition: background-color 0.25s;
 
     &:hover {
       background-color: var(---hovered-btn-clr);
+    }
+
+    
+    
+    @media screen and (min-width: 62em) {
+      margin-block-start: auto;
     }
   }
 }

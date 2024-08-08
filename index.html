@@ -25,7 +25,9 @@
     <link
       rel="stylesheet"
       href="style.css" />
-    <script src="index.js" defer></script>
+    <script
+      src="index.js"
+      defer></script>
     <title>Tip calculator app</title>
   </head>
   <body>
@@ -44,13 +46,14 @@
         <div class="form__control">
           <label for="bill">Bill</label>
           <span
-          aria-live="polite"
-          id="error"
-          >Can't be zero</span
-        >
+            aria-live="polite"
+            id="error"
+            >Can't be zero</span
+          >
           <div class="input__control">
             <input
               type="number"
+              autocomplete="off"
               placeholder="0"
               id="bill" />
           </div>
@@ -102,12 +105,13 @@
 
             <div class="radio__control--custom">
               <input
-              type="radio"
-              name="percentage"
-              id="custom" />
+                type="radio"
+                name="percentage"
+                id="custom" />
               <div class="custom-input__container">
                 <input
                   type="number"
+                  autocomplete="off"
                   placeholder="Custom"
                   id="custom__input" />
               </div>
@@ -130,9 +134,10 @@
           >
           <div class="input__control">
             <input
-            type="number"
-            placeholder="0"
-            id="quantity" />
+              type="number"
+              autocomplete="off"
+              placeholder="0"
+              id="quantity" />
           </div>
         </div>
       </form>
@@ -142,28 +147,36 @@
       <section class="spl__results">
         <h2 class="sr-only">Splitter Calculation Results</h2>
 
-      <div class="spl__results-info">
-        <div class="[ flex-c-sb ] [ tip__amount ]">
-          <div class="flex-col">
-            <h3 class="price-title">Tip Amount</h3>
-            <span class="price-label">/ person</span>
+        <div class="spl__results-info">
+          <div class="[ flex-c-sb ] [ tip__amount ]">
+            <div class="flex-col">
+              <h3 class="price-title">Tip Amount</h3>
+              <span class="price-label">/ person</span>
+            </div>
+            <div
+              class="price"
+              id="amount">
+              <span>$4.27</span>
+            </div>
           </div>
-          <div class="price" id="amount">
-            <span>$4.27</span>
-          </div>
-        </div>
 
-        <div class="[ flex-c-sb ] [ tip__total ]">
-          <div class="flex-col">
-            <h3 class="price-title">Total</h3>
-            <span class="price-label">/ person</span>
-          </div>
-          <div class="price" id="total">
-            <span>$32.79</span>
+          <div class="[ flex-c-sb ] [ tip__total ]">
+            <div class="flex-col">
+              <h3 class="price-title">Total</h3>
+              <span class="price-label">/ person</span>
+            </div>
+            <div
+              class="price"
+              id="total">
+              <span>$32.79</span>
+            </div>
           </div>
         </div>
-      </div>
-        <button type="reset" class="btn__reset">Reset</button>
+        <button
+          type="reset"
+          class="btn__reset">
+          Reset
+        </button>
       </section>
       <!-- RESULTS -->
     </main>
