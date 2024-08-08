@@ -1,44 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png" />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="style.css" />
+    <script src="index.js" defer></script>
+    <title>Tip calculator app</title>
+  </head>
+  <body>
+    <header class="spl__header">
+      <h1 class="sr-only">Splitter</h1>
+      <img
+        src="./images/logo.svg"
+        alt="Splitter" />
+    </header>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <main class="spl__main">
+      <h2 class="sr-only">Splitter Content</h2>
+      <!-- FORM -->
+      <form class="spl__form">
+        <h3 class="sr-only">Splitter Calculator</h3>
+        <div class="form__control">
+          <label for="bill">Bill</label>
+          <span
+          aria-live="polite"
+          id="error"
+          >Can't be zero</span
+        >
+          <div class="input__control">
+            <input
+              type="number"
+              placeholder="0"
+              id="bill" />
+          </div>
+        </div>
 
-  Bill
+        <fieldset class="spl__tip-selector">
+          <legend>Select Tip %</legend>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+          <div class="spl__tip-options">
+            <div class="radio__control">
+              <input
+                type="radio"
+                name="percentage"
+                id="option5" />
+              <label for="option5">5%</label>
+            </div>
 
-  Number of People
+            <div class="radio__control">
+              <input
+                type="radio"
+                name="percentage"
+                id="option10" />
+              <label for="option10">10%</label>
+            </div>
 
-  Tip Amount
-  / person
+            <div class="radio__control">
+              <input
+                type="radio"
+                name="percentage"
+                id="option15" />
+              <label for="option15">15%</label>
+            </div>
 
-  Total
-  / person
+            <div class="radio__control">
+              <input
+                type="radio"
+                name="percentage"
+                id="option25" />
+              <label for="option25">25%</label>
+            </div>
 
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+            <div class="radio__control">
+              <input
+                type="radio"
+                name="percentage"
+                id="option50" />
+              <label for="option50">50%</label>
+            </div>
+
+            <div class="radio__control--custom">
+              <input
+              type="radio"
+              name="percentage"
+              id="custom" />
+              <div class="custom-input__container">
+                <input
+                  type="number"
+                  placeholder="Custom"
+                  id="custom__input" />
+              </div>
+              <!-- <label for="custom">
+                <input
+                  type="number"
+                  placeholder="Custom"
+                  id="custom__input" />
+              </label> -->
+            </div>
+          </div>
+        </fieldset>
+
+        <div class="form__control">
+          <label for="quantity">Number of People</label>
+          <span
+            aria-live="polite"
+            id="error"
+            >Can't be zero</span
+          >
+          <div class="input__control">
+            <input
+            type="number"
+            placeholder="0"
+            id="quantity" />
+          </div>
+        </div>
+      </form>
+      <!-- FORM -->
+
+      <!-- RESULTS -->
+      <section class="spl__results">
+        <h2 class="sr-only">Splitter Calculation Results</h2>
+
+        <div class="[ flex-c-sb ] [ tip__amount ]">
+          <div class="flex-col">
+            <h2>Tip Amount</h2>
+            <span>/ person</span>
+          </div>
+          <div class="amount" id="amount">
+            <span>$4.27</span>
+          </div>
+        </div>
+
+        <div class="[ flex-c-sb ] [ tip__total ]">
+          <div class="flex-col">
+            <h2>Total</h2>
+            <span>/ person</span>
+          </div>
+          <div class="total" id="total">
+            <span>$32.79</span>
+          </div>
+        </div>
+        <button type="reset" class="btn btn__reset">Reset</button>
+      </section>
+      <!-- RESULTS -->
+    </main>
+  </body>
 </html>
