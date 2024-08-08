@@ -1,5 +1,5 @@
 /* Declares layers in order of priority */
-@layer reset, base;
+@layer reset, base, pages, layouts, components;
 
 /* START OF Reset ***************** */
 @layer reset {
@@ -94,10 +94,14 @@
     --neutral-clr-5: #547878;
     --neutral-clr-6: #7f9d9f;
     --neutral-clr-7: #9FE8DF;
+    --neutral-clr-8: #9EBBBD;
     --white: #ffff;
 
     --main-bg: var(--neutral-clr-1);
+    --results-bg: var(--neutral-clr-3);
+    --input-bg: var(--neutral-clr-2);
     --input-clr: var(--neutral-clr-3);
+    --input-plchldr-clr: var(--neutral-clr-8);
     --label-clr: var(--neutral-clr-4);
     --radio-btn-clr: var(--neutral-clr-3);
 
@@ -106,7 +110,7 @@
 
     --custom-plchldr-clr: var(--neutral-clr-5);
     --person-clr: var(--neutral-clr-6);
-    --total-clr: var(--primary-clr);
+    --price-clr: var(--primary-clr);
     --error-clr: var(--primary-clr-2); 
 
     --border-radius-lg: 25px;
@@ -133,5 +137,216 @@
     position: absolute !important;
     width: 1px !important;
     white-space: nowrap !important;
+  }
+}
+
+
+@layer pages {
+  body {
+    background-color: var(--main-bg);
+    font-family: var(--main-font-family);
+  }
+}
+
+@layer layouts {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .flex-c-sb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .flex-col {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+
+@layer components {
+  .spl__header {
+    display: grid;
+    place-items: center;
+    margin-block-start: 3.125rem;
+  }
+
+  .spl__main {
+    background-color: var(--white);
+    border-top-left-radius: var(--border-radius-lg);
+    border-top-right-radius: var(--border-radius-lg);
+    padding: 2rem;
+    margin-block-start: 2.5rem;
+  }
+
+  .form__control {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    row-gap: 6px;
+    
+    label {
+      color: var(--label-clr);
+      font-size: 1rem;
+      font-weight: var(--fw-700);
+    }
+
+    #error {
+      justify-self: end;
+      color: var(--error-clr);
+      font-size: 1rem;
+      font-weight: var(--fw-700);
+      display: none;
+    }
+
+    & .input__control {
+      grid-column: 1 / -1;
+      background-color: var(--input-bg);
+      padding-block: 6px;
+      padding-inline: 17px;
+      border-radius: var(--border-radius-sm); 
+
+      
+
+      input {
+        width: 100%;
+        color: var(--input-clr);
+        font-weight: var(--fw-700);
+        font-size: var(--fs-form);
+        border: none;
+        outline: none;
+        text-align: right;
+        background-color: transparent;
+
+
+        &::placeholder {
+          color: var(--input-plchldr-clr);
+        }
+      }
+
+      #bill {
+        background: url('/images/icon-dollar.svg') no-repeat left;
+      }
+
+      #quantity {
+        background: url('/images/icon-person.svg') no-repeat left;
+      }
+    }
+  }
+
+  /* START SPL TIP SELECTOR AND CHILDREN *************** */
+  .spl__tip-selector {
+    border: none;
+    padding: 0;
+    margin-block: 2.5rem;
+  
+
+    legend {
+      color: var(--label-clr);
+      font-size: 1rem;
+      font-weight: var(--fw-700);
+      margin-block-end: 1rem;
+    }
+  }
+
+  .spl__tip-options {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    place-content: center;
+    row-gap: 1rem;
+    column-gap: 1rem;
+    font-size: var(--fs-form);
+    font-weight: var(--fw-700);
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    .radio__control {
+      background-color: var(--radio-btn-clr);
+      color: var(--white);
+      text-align: center;
+      border-radius: var(--border-radius-sm);
+      padding-block: .5rem;
+    }
+  }
+
+  .custom-input__container {
+    background-color: var(--input-bg);
+    padding-block: 6px;
+    border-radius: var(--border-radius-sm);
+    
+
+    input {
+      background-color: transparent;
+      border: none;
+      width: 10rem;
+      text-align: right;
+      padding-inline-end: 1rem;
+
+      &::placeholder {
+        color: var(--custom-plchldr-clr);
+      }
+    }
+  }
+  /* END SPL TIP SELECTOR AND CHILDREN *************** */
+
+
+  .spl__results {
+    background-color: var(--results-bg);
+    border-radius: var(--border-radius-md);
+    padding-inline: 1.5rem;
+    padding-block: 1.5rem;
+    color: var(--white);
+    margin-block-start: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .spl__results-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1.25rem;
+    }
+
+    .price-title {
+      font-size: 1rem;
+      font-weight: var(--fw-700);
+    }
+
+    .price-label {
+      font-size: 13px;
+      color: var(--person-clr);
+      line-height: 1;
+    }
+
+
+    .price {
+      font-size: 2rem;
+      font-weight: var(--fw-700);
+      color: var(--price-clr);
+    }
+  }
+
+  .btn__reset {
+    border: none;
+    background-color: var(--reset-btn-clr);
+    padding-block: 9px;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    font-weight: var(--fw-700);
+    color: var(--neutral-clr-3);
+    border-radius: var(--border-radius-sm);
+    margin-block-start: 1rem;
+    cursor: pointer;
+    transition: background-color .25s;
+
+    &:hover {
+      background-color: var(---hovered-btn-clr);
+    }
   }
 }

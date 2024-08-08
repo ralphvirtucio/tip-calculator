@@ -36,7 +36,7 @@
         alt="Splitter" />
     </header>
 
-    <main class="spl__main">
+    <main class="[ grid ] spl__main">
       <h2 class="sr-only">Splitter Content</h2>
       <!-- FORM -->
       <form class="spl__form">
@@ -142,26 +142,28 @@
       <section class="spl__results">
         <h2 class="sr-only">Splitter Calculation Results</h2>
 
+      <div class="spl__results-info">
         <div class="[ flex-c-sb ] [ tip__amount ]">
           <div class="flex-col">
-            <h2>Tip Amount</h2>
-            <span>/ person</span>
+            <h3 class="price-title">Tip Amount</h3>
+            <span class="price-label">/ person</span>
           </div>
-          <div class="amount" id="amount">
+          <div class="price" id="amount">
             <span>$4.27</span>
           </div>
         </div>
 
         <div class="[ flex-c-sb ] [ tip__total ]">
           <div class="flex-col">
-            <h2>Total</h2>
-            <span>/ person</span>
+            <h3 class="price-title">Total</h3>
+            <span class="price-label">/ person</span>
           </div>
-          <div class="total" id="total">
+          <div class="price" id="total">
             <span>$32.79</span>
           </div>
         </div>
-        <button type="reset" class="btn btn__reset">Reset</button>
+      </div>
+        <button type="reset" class="btn__reset">Reset</button>
       </section>
       <!-- RESULTS -->
     </main>
