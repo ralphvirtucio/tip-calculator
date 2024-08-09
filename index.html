@@ -43,7 +43,7 @@
       <!-- FORM -->
       <form class="spl__form">
         <h3 class="sr-only">Splitter Calculator</h3>
-        <div class="form__control">
+        <div class="form__control bill">
           <label for="bill">Bill</label>
           <span
             aria-live="polite"
@@ -77,6 +77,7 @@
               <input
                 type="radio"
                 name="percentage"
+                value="10"
                 id="option10" />
               <label for="option10">10%</label>
             </div>
@@ -85,6 +86,7 @@
               <input
                 type="radio"
                 name="percentage"
+                value="15"
                 id="option15" />
               <label for="option15">15%</label>
             </div>
@@ -93,6 +95,7 @@
               <input
                 type="radio"
                 name="percentage"
+                value="25"
                 id="option25" />
               <label for="option25">25%</label>
             </div>
@@ -100,6 +103,7 @@
             <div class="radio__control">
               <input
                 type="radio"
+                value="50"
                 name="percentage"
                 id="option50" />
               <label for="option50">50%</label>
@@ -109,25 +113,28 @@
               <input
                 type="radio"
                 name="percentage"
+                value="custom-radio-btn"
+                class="custom-radio"
                 id="custom" />
-              <div class="custom-input__container">
-                <input
+                <label for="custom" class="custom-input__container">
+                  <input
                   type="number"
-                  autocomplete="off"
+                  name="custom-input"
                   placeholder="Custom"
                   id="custom__input" />
-              </div>
-              <!-- <label for="custom">
-                <input
-                  type="number"
-                  placeholder="Custom"
-                  id="custom__input" />
-              </label> -->
+                </label>
+                <!-- <div class="custom-input__container">
+                  <input
+                    type="number"
+                    autocomplete="off"
+                    placeholder="Custom"
+                    id="custom__input" />
+                </div> -->
             </div>
           </div>
         </fieldset>
 
-        <div class="form__control">
+        <div class="form__control quantity">
           <label for="quantity">Number of People</label>
           <span
             aria-live="polite"
