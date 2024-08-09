@@ -1,6 +1,8 @@
 const form = document.querySelector('form');
 const formControl = document.querySelectorAll('.form__control')
 const customInput = document.querySelector('#custom__input')
+const customLabel = document.querySelector('.custom-input__container')
+const customRadioBtn = document.querySelector('.custom-radio') 
 const amount = document.querySelector('#amount')
 const total = document.querySelector('#total')
 
@@ -58,13 +60,12 @@ const handleFormChange = (e) => {
 
   const data = Object.fromEntries(new FormData(form))
 
+  console.log(data)
   
-  if(data.custominput) {
-    const customRadioBtn = document.querySelector('.custom-radio') 
-    customRadioBtn.checked = true 
-    customRadioBtn.value = data.custominput 
-  }
-  
+}
+
+const handleCustomClick = () => {
+  customRadioBtn.checked = true 
 }
 
 
@@ -75,4 +76,5 @@ formControl.forEach(node => {
 })
 
 
+customLabel.addEventListener('click', handleCustomClick)
 form.addEventListener('change', handleFormChange)
