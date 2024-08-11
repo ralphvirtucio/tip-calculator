@@ -60,7 +60,20 @@ const handleFormChange = (e) => {
 
   const data = Object.fromEntries(new FormData(form))
 
-  console.log(data)
+  // Destructuring Form Data
+  const { bill, percentage, quantity } = data
+
+  const tipPercentage = percentage / 100;
+
+  if(!isNaN(tipPercentage) && quantity !== '') {
+    const tip = Number(bill) * Number(tipPercentage)
+    const total = Number(bill) + Number(bill);
+
+    const tipPerPerson = tip / quantity
+    const totalPerPerson = total /quantity
+
+    console.log(tipPerPerson, totalPerPerson)
+  }
   
 }
 
