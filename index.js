@@ -67,12 +67,13 @@ const handleFormChange = (e) => {
 
   if(!isNaN(tipPercentage) && quantity !== '') {
     const tip = Number(bill) * Number(tipPercentage)
-    const total = Number(bill) + Number(bill);
+    const totalValue = Number(bill) + Number(bill);
 
     const tipPerPerson = tip / quantity
-    const totalPerPerson = total /quantity
+    const totalPerPerson = totalValue / quantity
 
-    console.log(tipPerPerson, totalPerPerson)
+    amount.textContent = tipPerPerson.toFixed(2)
+    total.textContent = totalPerPerson.toFixed(2)
   }
   
 }
@@ -90,4 +91,4 @@ formControl.forEach(node => {
 
 
 customLabel.addEventListener('click', handleCustomClick)
-form.addEventListener('change', handleFormChange)
+form.addEventListener('input', handleFormChange)
