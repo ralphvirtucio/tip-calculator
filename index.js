@@ -13,7 +13,7 @@ const resetBtn = document.querySelector('[type=reset]')
 // Render Error State
 const renderError = (name) => {
   const formControl = document.querySelector('.' + name)
-  const errorMessage = formControl.querySelector('#error');
+  const errorMessage = formControl.querySelector('#error__' + name);
   const inputContainer = formControl.querySelector('.input__control')
 
   errorMessage.style.display = 'block';
@@ -23,7 +23,8 @@ const renderError = (name) => {
 // Clear Error State
 const clearError = (name) => {
   const formControl = document.querySelector('.' + name)
-  const errorMessage = formControl.querySelector('#error');
+  const errorMessage = formControl.querySelector('#error__' + name);
+
   const inputContainer = formControl.querySelector('.input__control')
 
   errorMessage.style.display = 'none';

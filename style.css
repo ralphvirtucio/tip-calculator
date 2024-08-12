@@ -156,7 +156,7 @@
     @media screen and (min-width: 62em) {
       display: grid;
       place-items: center;
-      grid-auto-rows: 10rem 30rem;
+      grid-auto-rows: 15rem 25rem;
     }
   }
 }
@@ -216,7 +216,15 @@
       font-weight: var(--fw-700);
     }
 
-    #error {
+    #error__bill {
+      justify-self: end;
+      color: var(--error-clr);
+      font-size: 1rem;
+      font-weight: var(--fw-700);
+      display: none;
+    }
+
+    #error__quantity {
       justify-self: end;
       color: var(--error-clr);
       font-size: 1rem;
