@@ -122,8 +122,15 @@
                   type="number"
                   name="custominput"
                   placeholder="Custom"
-                  id="custom__input" />
+                  id="custom__input" 
+                  aria-labelledby="custom__label"
+                  aria-describedby="custom__description"
+                  
+                  />
                 </label>
+
+                <span id="custom__label" class="sr-only">Enter custom percentage</span>
+                <span id="custom__description" class="sr-only">This input allows you to specify a custom percentage.</span>
             </div>
           </div>
         </fieldset>
